@@ -1,0 +1,22 @@
+
+thoma@DESKTOP-JPTQ6D9 MINGW64 ~
+$ cd documents
+
+thoma@DESKTOP-JPTQ6D9 MINGW64 ~/documents
+$ cd bootcamp_experis
+
+thoma@DESKTOP-JPTQ6D9 MINGW64 ~/documents/bootcamp_experis
+$ cd week_1
+
+thoma@DESKTOP-JPTQ6D9 MINGW64 ~/documents/bootcamp_experis/week_1 (main)
+$ git init
+
+thoma@DESKTOP-JPTQ6D9 MINGW64 ~/documents/bootcamp_experis/week_1 (main)
+$ git add .
+
+thoma@DESKTOP-JPTQ6D9 MINGW64 ~/documents/bootcamp_experis/week_1 (main)
+$ git commit -am "week_1"
+
+thoma@DESKTOP-JPTQ6D9 MINGW64 ~/documents/bootcamp_experis/week_1 (main)
+$ git push
+
