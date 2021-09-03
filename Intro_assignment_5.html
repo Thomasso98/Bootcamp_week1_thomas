@@ -7,7 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Op iedere knop mag maar 1 keer geklikt worden!</p>
     <input type="button" value="A" onclick="AddDivWithLetter('A');">
     <input type="button" value="B" onclick="AddDivWithLetter('B');">
     <input type="button" value="C" onclick="AddDivWithLetter('C');">
@@ -45,10 +44,10 @@
                 ActiveLetter = D_Count;
                 break;
         }
-        if (document.getElementById("AddDubbleDiv").innerHTML.includes("U heeft op " + Letter + " geklikt")) {
+        if (document.getElementById("AddDubbleDiv").innerHTML.includes("U heeft op knop " + Letter + " geklikt")) {
             alert("U heeft al " + ActiveLetter + " keer op " + Letter + " gedrukt");
         }
-            var DivText = "U heeft op " + Letter + " geklikt <br>"
+            var DivText = "U heeft op knop " + Letter + " geklikt <br>"
             document.getElementById("AddDubbleDiv").innerHTML += DivText;
     }
 </script>
