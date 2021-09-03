@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Op iedere knop mag maar 1 keer geklikt worden!</p>
+    <input type="button" value="A" onclick="AddDivWithLetter('A');">
+    <input type="button" value="B" onclick="AddDivWithLetter('B');">
+    <input type="button" value="C" onclick="AddDivWithLetter('C');">
+    <input type="button" value="D" onclick="AddDivWithLetter('D');">
+    
+    <br>
+    <p>Letters pressed:</p>
+    <div id="AddDubbleDiv"></div>
+</body>
+
+
+<script>
+    var A_Count = 0;
+    var B_Count = 0;
+    var C_Count = 0;
+    var D_Count = 0;
+    var ActiveLetter = 0;
+
+    function AddDivWithLetter(Letter) {
+        switch (Letter) {
+            case "A":
+                A_Count++;
+                ActiveLetter = A_Count;
+                break;
+            case "B":
+                B_Count++;
+                ActiveLetter = B_Count;
+                break;
+            case "C":
+                C_Count++;
+                ActiveLetter = C_Count;
+                break;
+            case "D":
+                D_Count++;
+                ActiveLetter = D_Count;
+                break;
+        }
+        if (document.getElementById("AddDubbleDiv").innerHTML.includes("U heeft op " + Letter + " geklikt")) {
+            alert("U heeft al " + ActiveLetter + " keer op " + Letter + " gedrukt");
+        }
+            var DivText = "U heeft op " + Letter + " geklikt <br>"
+            document.getElementById("AddDubbleDiv").innerHTML += DivText;
+    }
+</script>
+
+
+</html>
