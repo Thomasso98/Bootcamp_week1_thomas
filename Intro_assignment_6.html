@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Nieuwe afbeelding" onclick="NieuweAfbeelding();">
+
+</body>
+
+<script>
+    var Afbeelding =1;
+
+    function NieuweAfbeelding() {
+        if(Afbeelding == 2){
+            Afbeelding = 1;
+        } else {
+            Afbeelding ++;
+
+        }
+        switch(Afbeelding){
+            case 1:
+            document.getElementById("image").innerHTML = "<img width=\"600\" height=\"400\" src=\"https://cdn.britannica.com/05/155405-050-F8969EE6/Spring-flowers-fruit-trees-bloom.jpg\">";
+            break;
+            case 2:
+            document.getElementById("image").innerHTML = "<img width=\"600\" height=\"400\" src=\"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beautiful-tropical-sunset-scenery-two-sun-beds-royalty-free-image-1595368231.jpg\">";
+            break;
+        }
+    }        
+</script>
+
+</html>
