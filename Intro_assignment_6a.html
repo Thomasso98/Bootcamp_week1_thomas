@@ -6,11 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+    input{
+        background-color : rgb(200, 200, 200);
+        color : rgb(0, 0, 0);
+    }
+    div{
+        background-color: silver;
+        border: 5px solid goldenrod;
+        text-align:center;
+    }
+</style>
+
 <body>
+    <input type="button" value="Nieuwe afbeelding" onclick="NextSeason();">
+    <br>
+    <div id="image"></div>
+    <div id="Date"></div>
 
-    <button onclick="document.getElementById('myImage').src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beautiful-tropical-sunset-scenery-two-sun-beds-royalty-free-image-1595368231.jpg'">Nieuwe afbeelding</button>
-
-    <img id="myImage" src="https://cdn.britannica.com/05/155405-050-F8969EE6/Spring-flowers-fruit-trees-bloom.jpg" style="width:100px">
-    
 </body>
+
+<script>
+    var Year =0;
+    var Season = 0;
+    function NextSeason() {
+        if(Season == 4){
+            Season = 1;
+            Year ++;
+        } else {
+            Season ++;
+        }
+        document.getElementById("Date").innerHTML = "Er zijn "+Year+" jaren voorbij.";
+        switch(Season){
+            case 1:
+            document.getElementById("image").innerHTML = "<img width=\"900\" height=\"575\" src=\"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/snowy-landscape-royalty-free-image-621983566-1542812946.jpg\">";
+            break;
+            case 2:
+            document.getElementById("image").innerHTML = "<img width=\"900\" height=\"575\" src=\"https://cdn.britannica.com/05/155405-050-F8969EE6/Spring-flowers-fruit-trees-bloom.jpg\">";
+            break;
+            case 3:
+            document.getElementById("image").innerHTML = "<img width=\"900\" height=\"575\" src=\"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beautiful-tropical-sunset-scenery-two-sun-beds-royalty-free-image-1595368231.jpg\">";
+            break;
+            case 4:
+            document.getElementById("image").innerHTML = "<img width=\"900\" height=\"575\" src=\"https://images2.minutemediacdn.com/image/upload/c_crop,h_1600,w_2378,x_11,y_0/v1569260079/shape/mentalfloss/gettyimages-1053614486_1.jpg?itok=r2LUV-RS\">";
+            break;
+        }
+    }
+</script>
+
 </html>
