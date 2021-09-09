@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Hieronder staan zeven modellen van de Audi A serie</p>
+    <br> 
+    <p>Klik de modellen aan in de volgorde van laag naar groot, dus eerst A1 dan A3, A4, enz...</p>
+    <div>
+        <div id="AA6"><img src="https://mediaservice.audi.com/media/live/50900/fly1400x601n8/4a2/2021.png?wid=291&mimetype=image/webp" onclick="NextModel('AA6');"></div>
+    </div>
+    <div>
+        <div id="AA8"><img src="https://mediaservice.audi.com/media/live/50900/fly1400x601n8/4n203a/2021.png?wid=291&mimetype=image/webp" onclick="NextModel('AA8');"></div>
+    </div>
+    <div>
+        <div id="AA4"><img src="https://mediaservice.audi.com/media/live/50900/fly1400x601n8/8wc/2021.png?wid=291&mimetype=image/webp" onclick="NextModel('AA4');"></div>
+    </div>
+    <div>
+        <div id="AA5"><img src="https://mediaservice.audi.com/media/live/50900/fly1400x601n8/f5p/2021.png?wid=291&mimetype=image/webp" onclick="NextModel('AA5');"></div>
+    </div>
+    <div>
+        <div id="AA1"><img src="https://mediaservice.audi.com/media/live/50900/fly1400x601n8/gba/2021.png?wid=291&mimetype=image/webp" onclick="NextModel('AA1');"></div>
+    </div>
+    <div>
+        <div id="AA7"><img src="https://mediaservice.audi.com/media/live/50900/fly1400x601n8/4kar/2021.png?wid=291&mimetype=image/webp" onclick="NextModel('AA7');"></div>
+    </div>
+    <div>
+        <div id="AA3"><img src="https://mediaservice.audi.com/media/live/50350/fly1400x601n8/8yaar/2021.png?wid=291&mimetype=image/webp" onclick="NextModel('AA3');"></div>
+    </div>
+    <input type="button" value="Is dit de juiste volgorde?" onclick="CheckModels();">
+</body>
+
+<script>
+    var Model = 0;
+
+    function NextModel(TargetDiv) {
+        if (Model == 7) {
+            Model = 1;
+        } else {
+            Model++;
+        }
+        switch (Model) {
+            case 1:
+                document.getElementById(TargetDiv).innerHTML = "<img width=\"291\" height=\"125\" src=\"https://forms.audi.nl/~/media/Forms/Audi/serie-logos/Audi%20A1.ashx?bc=White&as=1&mw=348\">";
+                break;
+            case 2:
+                document.getElementById(TargetDiv).innerHTML = "<img width=\"291\" height=\"125\" src=\"https://forms.audi.nl/~/media/Forms/Audi/serie-logos/Audi%20A3.ashx?bc=White&as=1&mw=348\">";
+                break;
+            case 3:
+                document.getElementById(TargetDiv).innerHTML = "<img width=\"291\" height=\"125\" src=\"https://forms.audi.nl/~/media/Forms/Audi/serie-logos/Audi%20A4.ashx?bc=White&as=1&mw=348\">";
+                break;
+            case 4:
+                document.getElementById(TargetDiv).innerHTML = "<img width=\"291\" height=\"125\" src=\"https://forms.audi.nl/~/media/Forms/Audi/serie-logos/Audi%20A5.ashx?bc=White&as=1&mw=348\">";
+                break;
+            case 5:
+                document.getElementById(TargetDiv).innerHTML = "<img width=\"291\" height=\"125\" src=\"https://forms.audi.nl/~/media/Forms/Audi/serie-logos/Audi%20A6.ashx?bc=White&as=1&mw=348\">";
+                break;
+            case 6:
+                document.getElementById(TargetDiv).innerHTML = "<img width=\"291\" height=\"125\" src=\"https://forms.audi.nl/~/media/Forms/Audi/serie-logos/Audi%20A7.ashx?bc=White&as=1&mw=348\">";
+                break;
+            case 7:
+                document.getElementById(TargetDiv).innerHTML = "<img width=\"291\" height=\"125\" src=\"https://forms.audi.nl/~/media/Forms/Audi/serie-logos/Audi%20A8.ashx?bc=White&as=1&mw=348\">";
+                break;
+        }
+    }
+
+    function CheckModels(){
+        if(document.getElementById('AA1').value == 6){
+            alert("Gefeliciteerd!")
+        } else {
+            alert("Jammer!")
+        }
+    }
+</script>
+
+</html>

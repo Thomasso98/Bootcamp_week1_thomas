@@ -1,0 +1,10 @@
+Zet een foto van zeven Audi auto's onder elkaar.
+Als je op een van de zeven auto's klikt komt een foto van 'A1' op de plaats van de foto.
+Als je op de volgende auto klikt komt een foto van 'A3' op de plaats van de foto.
+Op elk plaatje kan je maar één keer klikken, dus van 'auto' plaatje naar bijbehorende 'tekst' plaatje.
+De auto foto's en bijbehorende tekstplaatjes staan in onderstaande link.
+https://github.com/Thomasso98/Bootcamp_week1_thomas/blob/main/Audi_links.txt 
+
+ADVANCED:
+Maak een knop met daarop Is dit de juiste volgorde?
+Als de volgorde juist is zie je Gefeliciteerd! en anders zie je Jammer!

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Raad het getal!</title>
+
+	<style>
+		html {
+	font-family: sans-serif;
+	}
+	
+		body {
+	width: 50%;
+	max-width: 800px;
+	min-width: 480px;
+	margin: 0 auto;
+	}
+	</style>
+</head>
+
+<body>
+<h1>Raad het juiste getal!</h1>
+
+<p>De computer heeft een willekeurig getal gekozen tussen 1 - 100.
+Laten we kijken of je het raad...</p>
+
+<div class="form">
+	<label for="guessField">Voer uw gok in: </label>
+	<input type = "text" id = "guessField" class = "guessField">
+	<input type = "submit" value = "Gok!"
+		class = "guessSubmit" id = "submitguess">
+</div>
+
+<script>
+	var y = Math.floor(Math.random() * 100 + 1);
+	var guess = 1;
+	document.getElementById("submitguess").onclick = function(){
+	
+var x = document.getElementById("guessField").value;
+
+if(x == y)
+{	
+	alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+			+ guess + " GUESS ");
+}
+else if(x > y) /* if guessed number is greater
+				than actual number*/
+{	
+	guess++;
+	alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+}
+else
+{
+	guess++;
+	alert("OOPS SORRY!! TRY A GREATER NUMBER")
+}
+}
+</script>
+</body>
+</html>					
