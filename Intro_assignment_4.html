@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+        function AddDivWithLetter(letter){
+            document.getElementById("keuze").innerHTML += "U heeft op knop " + letter + " geklikt. <br>";
+
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+    <input type="button" value="A" onclick="AddDivWithLetter('A');">
+    <input type="button" value="B" onclick="AddDivWithLetter('B');">
+    <input type="button" value="C" onclick="AddDivWithLetter('C');">
+    <input type="button" value="D" onclick="AddDivWithLetter('D');">
+    <div id="keuze">    </div>
+</body>
+</html>

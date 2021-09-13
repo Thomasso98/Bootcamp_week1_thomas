@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p>Aantal keer dat de berekening word uitgevoerd:</p>
+            <input type="number" id="XCount" value=100>
+            <input type="button" value="Voeg berekeningen toe" onclick="CalculatePi();">
+        </div>
+            <p>Huidige gok van π:</p>
+            <p id="HuidigeGok"></p>
+            <table id="ResultsTable" class="table table-striped">
+                <thead>
+                    <th>#Stap</th>
+                    <th>Nummer</th>
+                    <th>Negatief</th>
+                    <th>Stap waarde</th>
+                    <th>Huidige gok</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+<script>
+    var StepCount = 1;
+    var Negative = false;
+    var StepNumber = 1;
+    var CurrentSum = 0;
+    const dataPoints = [0];
+
+    function CalculatePi() {
+        var XCount = document.getElementById("XCount").value;
+        if (XCount > 500) {
+            alert("De maximale input is 500")
+            return;
+        }
+        for (var i = 0; i < XCount; i++) {
+            var StepResult = 1 / StepNumber;
+            if (Negative) {
+                CurrentSum = CurrentSum - StepResult;
+                Negative = false;
+            } else {
+                CurrentSum = CurrentSum + StepResult;
+                Negative = true;
+            }
+            dataPoints.push(CurrentSum * 4);
+            var tr = "<tr><td>" + StepCount + "</td><td>" + StepNumber + "</td><td>" + Negative + "</td><td>" +
+                StepResult.toFixed(5) + "</td><td>" + (CurrentSum * 4).toFixed(5) + "</td></tr>";
+            document.querySelector('#ResultsTable tbody').innerHTML += tr;
+            StepCount++;
+            StepNumber = StepNumber + 2;
+        }
+        UpdateHuidigeGok()
+    }
+
+    function UpdateHuidigeGok() {
+        document.getElementById("HuidigeGok").innerHTML = ((CurrentSum) * 4).toFixed(5);
+    }
+</script>
+
+
+</html>
